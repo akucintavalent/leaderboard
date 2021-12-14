@@ -10,18 +10,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akucintavalent/webpack-exercise.git"
+    "url": "git+https://github.com/akucintavalent/leaderboard.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/akucintavalent/webpack-exercise/issues"
+    "url": "https://github.com/akucintavalent/leaderboard/issues"
   },
-  "homepage": "https://github.com/akucintavalent/webpack-exercise#readme",
+  "homepage": "https://github.com/akucintavalent/leaderboard#readme",
   "devDependencies": {
     "css-loader": "^6.5.1",
     "html-webpack-plugin": "^5.5.0",
+    "sass": "^1.45.0",
     "style-loader": "^3.3.1",
     "webpack": "^5.64.4",
     "webpack-cli": "^4.9.1",
