@@ -19,11 +19,11 @@ body {
   width: 15em;
   height: 20em;
   border: 1px solid black;
-}
 
-.scores li {
-  height: 2em;
-  border: 1px solid black;
+  li {
+    height: 2em;
+    border: 1px solid black;
+  }
 }
 
 .add-score {
@@ -35,5 +35,3 @@ body {
 #submit {
   align-self: end;
 }
-
-/*# sourceMappingURL=style.css.map */
