@@ -19,6 +19,7 @@ body {
   width: 15em;
   height: 20em;
   border: 1px solid black;
+  overflow: scroll;
 }
 
 .scores li {
