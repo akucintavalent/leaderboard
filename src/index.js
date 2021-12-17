@@ -1,14 +1,47 @@
-import _ from "lodash";
-import './style.css'
+import './styles/main.css';
 
-function component() {
-  const element = document.createElement("div");
-
-  // Lodash, currently included via a script, is required for this line to work
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-
-  return element;
+async function postData(url = '', data = {}) {
+  const response = await fetch(url, {
+    method: 'POST',
+    mode: 'cors',
+    cache: 'no-cache',
+    credentials: 'same-origin',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    redirect: 'follow',
+    referrerPolicy: 'no-referrer',
+    body: JSON.stringify(data),
+  });
+  return response.json();
 }
 
-document.body.appendChild(component());
+const nameInput = document.getElementById('name');
+const scoreInput = document.getElementById('score');
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', async () => {
+  await postData(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QG3sxOihEfABZTgB6FYu/scores/',
+    { user: nameInput.value, score: +scoreInput.value },
+  );
+  nameInput.value = '';
+  scoreInput.value = '';
+});
+
+const refreshButton = document.getElementById('refresh');
+const scoresUl = document.getElementsByClassName('scores')[0];
+
+const loadScores = async () => {
+  scoresUl.innerHTML = '';
+  const { result: scores } = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QG3sxOihEfABZTgB6FYu/scores/')
+    .then((response) => response.json());
+  scores.sort((a, b) => b.score - a.score).forEach((score) => {
+    const li = document.createElement('li');
+    li.classList.add('score-element');
+    li.innerHTML = `<p>${score.user}</p><p>${score.score}</p>`;
+    scoresUl.appendChild(li);
+  });
+};
+
+refreshButton.addEventListener('click', loadScores);
+window.onload = loadScores;

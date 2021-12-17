@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wbpack Exercise</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+    <h1>Leaderboard</h1>
+    <div class="container">
+      <div class="scores-container">
+        <div class="scores-title-button"><h2>Recent scores</h2><button id="refresh">Refresh</button></div>
+        <ul class="scores">
+        </ul>
+      </div>
+      <div class="add-score">
+        <h2>Add your score</h2>
+        <input id="name" type="text" placeholder="Your name">
+        <input id="score" type="number" placeholder="Your score">
+        <button id="submit">Submit</button>
+      </div>
+    </div>
 </body>
 </html>
