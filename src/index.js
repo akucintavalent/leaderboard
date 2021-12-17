@@ -37,7 +37,8 @@ const loadScores = async () => {
     .then((response) => response.json());
   scores.sort((a, b) => b.score - a.score).forEach((score) => {
     const li = document.createElement('li');
-    li.innerHTML = `${score.user}: ${score.score}`;
+    li.classList.add('score-element');
+    li.innerHTML = `<p>${score.user}</p><p>${score.score}</p>`;
     scoresUl.appendChild(li);
   });
 };
