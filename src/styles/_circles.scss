@@ -1,0 +1,37 @@
+.circle {
+  $circle-width: 300px;
+
+  position: absolute;
+  background: rgb(166, 166, 255);
+  border-radius: 50%;
+  width: $circle-width;
+  height: $circle-width;
+  z-index: -1;
+
+  &-1 {
+    $circle-width: 300px;
+
+    width: $circle-width;
+    height: $circle-width;
+    left: 70%;
+    top: 20em;
+  }
+
+  &-2 {
+    $circle-width: 70px;
+
+    width: $circle-width;
+    height: $circle-width;
+    left: 0;
+    top: -3%;
+  }
+
+  &-3 {
+    $circle-width: 150px;
+
+    width: $circle-width;
+    height: $circle-width;
+    left: -5%;
+    top: 25em;
+  }
+}

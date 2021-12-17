@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-![image](https://user-images.githubusercontent.com/87897753/146068332-fec3dee4-cc08-4569-a4d3-4740101ba79e.png)
+![image](https://user-images.githubusercontent.com/87897753/146473048-760f81e2-4b03-40a3-ae2a-2a5966a6cb13.png)
 
 ## Built With
 

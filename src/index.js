@@ -1,4 +1,4 @@
-import './style.css';
+import './styles/main.css';
 
 async function postData(url = '', data = {}) {
   const response = await fetch(url, {
@@ -35,9 +35,10 @@ const loadScores = async () => {
   scoresUl.innerHTML = '';
   const { result: scores } = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/QG3sxOihEfABZTgB6FYu/scores/')
     .then((response) => response.json());
-  scores.forEach((score) => {
+  scores.sort((a, b) => b.score - a.score).forEach((score) => {
     const li = document.createElement('li');
-    li.innerHTML = `${score.user}: ${score.score}`;
+    li.classList.add('score-element');
+    li.innerHTML = `<p>${score.user}</p><p>${score.score}</p>`;
     scoresUl.appendChild(li);
   });
 };

@@ -1,0 +1,35 @@
+.scores-container {
+  width: 50%;
+}
+
+.scores-title-button {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.5em;
+}
+
+.scores {
+  list-style-type: none;
+  flex-grow: 1;
+  height: 20em;
+  // border: 1px solid black;
+  overflow: scroll;
+  padding: 1em;
+  background-color: rgba(231, 242, 255, 0.808);
+  border-radius: 1em;
+
+  li {
+    min-height: 2em;
+    padding-top: 0.3em;
+    padding-left: 0.3em;
+    border-bottom: 1px solid rgba(148, 148, 148, 0.466);
+  }
+}
+
+.score-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
